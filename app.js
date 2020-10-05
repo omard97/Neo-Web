@@ -36,6 +36,37 @@ app.get('/', (req,res)=>{
   res.send('bienvenido a la api de Neo-Web');
 });
 
+//obtener todos los productos de cada cliente
+app.get('/clienteproducto', (req,res)=>{
+  const sql = 'select c.Nombre, c.Apellido, p.NombreP, p.Precio, cx.cantProducto from ClienteXProducto cx inner join cliente c on c.idcliente = cx.ID_cliente inner join Producto p on p.idproducto = cx.ID_producto;';
+  connection.query(sql,(error, results)=>{
+    if(error) throw error;
+
+    if(results.length>0){
+      res.json(results); 
+    }else{
+      res.send('no hay resultados');
+    }
+  });
+});
+
+//obtener todos los productos de un cliente
+app.get('/clienteproducto/:id', (req,res)=>{
+  const {id}=req.params
+  const sql = `select c.Nombre, c.Apellido, p.NombreP, p.Precio, cx.cantProducto from ClienteXProducto cx inner join cliente c on c.idcliente = cx.ID_cliente inner join Producto p on p.idproducto = cx.ID_producto where cx.ID_cliente = ${id};`;
+  connection.query(sql,(error, results)=>{
+    if(error) throw error;
+
+    if(results.length>0){
+      res.json(results); 
+    }else{
+      res.send('no hay resultados');
+    }
+  });
+});
+
+
+
 //Obtener todos Clientes
 app.get('/cliente', (req,res)=>{
   const sql = 'SELECT * FROM cliente;';
@@ -80,7 +111,7 @@ app.get('/Producto', (req,res)=>{
 });
 
 //obtener 1 solo producto
-app.get('/producto/:id', (req,res)=>{
+app.get('/Producto/:id', (req,res)=>{
   const {id}=req.params
   const sql = `select * from Producto where idproducto = ${id}`;
   connection.query(sql,(error, result)=>{
@@ -124,6 +155,24 @@ app.post('/crearProducto', (req,res)=>{
   }
 });
 
+//crear nuevo clienteyproducto
+app.post('/crearclienteproducto', (req,res)=>{
+  const sql = 'insert into ClienteXProducto set ?';
+
+  const CliexProductobjet = {
+    ID_cliente :req.body.ID_cliente,
+    ID_producto : req.body.ID_producto,
+    cantProducto : req.body.cantProducto
+    
+  }
+  connection.query(sql,CliexProductobjet), error => {
+    if(error) throw error;
+    res.send('Informacion  creado');
+  }
+});
+
+
+
 //actualizar cliente
 app.put('/update/cliente/:id',(req, res)=> {
   const {id} = req.params;
@@ -155,7 +204,7 @@ app.put('/update/producto/:id',(req,res)=> {
 });
 
 //eliminar cliente
-app.delete('/delete/cliente/:id', (req,res)=>{
+app.delete('/borrar/cliente/:id', (req,res)=>{
   const {id} = req.params;
   const sql = `delete from cliente where idcliente = ${id}`;
 
@@ -168,7 +217,7 @@ app.delete('/delete/cliente/:id', (req,res)=>{
 });
 
 //eliminar cliente
-app.delete('/delete/producto/:id', (req,res)=>{
+app.delete('/borrar/producto/:id', (req,res)=>{
   const {id} = req.params;
   const sql = `delete from Producto where idproducto = ${id}`;
 
