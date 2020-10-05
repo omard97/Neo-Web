@@ -38,9 +38,10 @@ app.get('/', (req,res)=>{
 
 //Obtener todos Clientes
 app.get('/cliente', (req,res)=>{
-  const sql = 'SELECT * FROM cliente;'
+  const sql = 'SELECT * FROM cliente;';
   connection.query(sql,(error, results)=>{
     if(error) throw error;
+
     if(results.length>0){
       res.json(results); 
     }else{
@@ -49,9 +50,19 @@ app.get('/cliente', (req,res)=>{
   });
 });
 
-//Obtener todos Clientes
-app.get('/cliente', (req,res)=>{
-  res.send('List of cliente');
+//Obtener solo 1 Cliente
+app.get('/cliente/:id', (req,res)=>{
+  const {id}=req.params
+  const sql = `select * from cliente where idcliente = ${id}`;
+  connection.query(sql,(error, result)=>{
+    if(error) throw error;
+
+    if(result.length>0){
+      res.json(result); 
+    }else{
+      res.send('no hay resultados');
+    }
+  });
 });
 
 //Obtener todos los productos
@@ -59,6 +70,7 @@ app.get('/Producto', (req,res)=>{
   const sql = 'SELECT * FROM Producto;'
   connection.query(sql,(error, results)=>{
     if(error) throw error;
+
     if(results.length>0){
       res.json(results); 
     }else{
@@ -67,32 +79,102 @@ app.get('/Producto', (req,res)=>{
   });
 });
 
+//obtener 1 solo producto
+app.get('/producto/:id', (req,res)=>{
+  const {id}=req.params
+  const sql = `select * from Producto where idproducto = ${id}`;
+  connection.query(sql,(error, result)=>{
+    if(error) throw error;
+
+    if(result.length>0){
+      res.json(result); 
+    }else{
+      res.send('no hay resultados');
+    }
+  });
+});
+
 //crear nuevo cliente
-app.post('/add', (req,res)=>{
-  res.send('nuevo cliente');
+app.post('/crearCliente', (req,res)=>{
+  const sql = 'insert into cliente set ?';
+
+  const clienteobjt = {
+    Nombre :req.body.Nombre,
+    Apellido : req.body.Apellido,
+    Correo : req.body.Correo
+  }
+  connection.query(sql,clienteobjt, error => {
+    if(error) throw error;
+    res.send('Cliente creado');
+  });
 });
 
 //crear nuevo producto
-app.post('/add', (req,res)=>{
-  res.send('nuevo producto');
+app.post('/crearProducto', (req,res)=>{
+  const sql = 'insert into Producto set ?';
+
+  const Productobjet = {
+    NombreP :req.body.NombreP,
+    Precio : req.body.Precio
+    
+  }
+  connection.query(sql,Productobjet), error => {
+    if(error) throw error;
+    res.send('Producto creado');
+  }
 });
 
 //actualizar cliente
-app.put('/update/cliente/:id',(req,res)=> {
-  res.send('update cliente');
+app.put('/update/cliente/:id',(req, res)=> {
+  const {id} = req.params;
+  const {Nombre,Apellido,Correo} = req.body;
+  const sql = `update cliente set Nombre = '${Nombre}',
+  Apellido = '${Apellido}', Correo = '${Correo}'
+  where idcliente = ${id}`;
+
+  connection.query(sql, error =>{
+    if(error) throw error;
+
+    res.send('Cliente actualizado');
+  });
+
 });
 
 //actualizar producto
 app.put('/update/producto/:id',(req,res)=> {
-  res.send('update producto');
+  const {id} = req.params;
+  const {NombreP,Precio,} = req.body;
+  const sql = `update Producto set NombreP = '${NombreP}', Precio = '${Precio}' where idproducto = ${id}`;
+
+  connection.query(sql, error =>{
+    if(error) throw error;
+
+    res.send('Producto actualizado');
+  });
+
 });
 
 //eliminar cliente
 app.delete('/delete/cliente/:id', (req,res)=>{
-  res.send('delete cliente');
+  const {id} = req.params;
+  const sql = `delete from cliente where idcliente = ${id}`;
+
+  connection.query(sql, error =>{
+    if(error) throw error;
+
+    res.send('Cliente eliminado');
+  });
+
 });
 
 //eliminar cliente
 app.delete('/delete/producto/:id', (req,res)=>{
-  res.send('delete producto');
+  const {id} = req.params;
+  const sql = `delete from Producto where idproducto = ${id}`;
+
+  connection.query(sql, error =>{
+    if(error) throw error;
+
+    res.send('Producto eliminado');
+  });
 });
