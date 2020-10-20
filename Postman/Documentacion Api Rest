@@ -1,0 +1,1554 @@
+{
+	"info": {
+		"_postman_id": "fcda8647-5bd5-440a-8cee-3d92a69e09ed",
+		"name": "Documentacion Api Rest",
+		"description": "# Introduction\nWhat does your API do?\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Historial de Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cliente"
+					]
+				},
+				"description": "_Lista_\r\n\r\nListado de todos los clientes actuales en la Base de Datos"
+			},
+			"response": [
+				{
+					"name": "Historial de todos los clientes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1156"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"484-8ZmGlRkk+/q3e9ykiPru9ZF28Nw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 02:26:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idcliente\": 1,\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"Correo\": \"GonzaVico@hotmail.com\"\n    },\n    {\n        \"idcliente\": 2,\n        \"Nombre\": \"Matias\",\n        \"Apellido\": \"Vigoni\",\n        \"Correo\": \"MatiVigoni@hotmail.com\"\n    },\n    {\n        \"idcliente\": 3,\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"Correo\": \"omardandrea@hotmail.com\"\n    },\n    {\n        \"idcliente\": 4,\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Suarez\",\n        \"Correo\": \"Suarez@gmail.com\"\n    },\n    {\n        \"idcliente\": 5,\n        \"Nombre\": \"Lucia\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"lucia98@hotmail.com\"\n    },\n    {\n        \"idcliente\": 6,\n        \"Nombre\": \"Nico\",\n        \"Apellido\": \"Perez\",\n        \"Correo\": \"Nico@hotmail.com\"\n    },\n    {\n        \"idcliente\": 7,\n        \"Nombre\": \"Pepe\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Pepe@hotmail.com\"\n    },\n    {\n        \"idcliente\": 8,\n        \"Nombre\": \"Fede\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Fede@hotmail.com\"\n    },\n    {\n        \"idcliente\": 9,\n        \"Nombre\": \"Messi\",\n        \"Apellido\": \"Lionel\",\n        \"Correo\": \"Messi@gmail.com\"\n    },\n    {\n        \"idcliente\": 10,\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Maradona\",\n        \"Correo\": \"Maradona@gmail.com\"\n    },\n    {\n        \"idcliente\": 11,\n        \"Nombre\": \"Nadia\",\n        \"Apellido\": \"Soledad\",\n        \"Correo\": \"Nadia@gmail.com\"\n    },\n    {\n        \"idcliente\": 12,\n        \"Nombre\": \"Nadia\",\n        \"Apellido\": \"Soledad\",\n        \"Correo\": \"Nadia@gmail.com\"\n    },\n    {\n        \"idcliente\": 13,\n        \"Nombre\": \"Sole\",\n        \"Apellido\": \" \",\n        \"Correo\": \"Sole@gmail.com\"\n    },\n    {\n        \"idcliente\": 14,\n        \"Nombre\": \"Julio\",\n        \"Apellido\": \" \",\n        \"Correo\": \"Julio@gmail.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Cliente por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cliente/7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cliente",
+						"7"
+					]
+				},
+				"description": "Dependiendo del id que se eliga retorna la informacion de un cliente"
+			},
+			"response": [
+				{
+					"name": "Cliente por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cliente/7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cliente",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "84"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"54-GknZbt/s23RPdYXS1eC2g001iLU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 02:28:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idcliente\": 7,\n        \"Nombre\": \"Pepe\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Pepe@hotmail.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Crear un Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\":\"Lucas2\",\r\n    \"Apellido\":\"Rojas2\",\r\n    \"Correo\":\"Lucas@hotmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/crearCliente",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crearCliente"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Revision del nuevo cliente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Lucas2\",\r\n    \"Apellido\":\"Rojas2\",\r\n    \"Correo\":\"Lucas@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1322"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52a-caCoJNUZ5HmXpwzzzOVkQO82/bA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 02:40:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idcliente\": 1,\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"Correo\": \"GonzaVico@hotmail.com\"\n    },\n    {\n        \"idcliente\": 2,\n        \"Nombre\": \"Matias\",\n        \"Apellido\": \"Vigoni\",\n        \"Correo\": \"MatiVigoni@hotmail.com\"\n    },\n    {\n        \"idcliente\": 3,\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"Correo\": \"omardandrea@hotmail.com\"\n    },\n    {\n        \"idcliente\": 4,\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Suarez\",\n        \"Correo\": \"Suarez@gmail.com\"\n    },\n    {\n        \"idcliente\": 5,\n        \"Nombre\": \"Lucia\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"lucia98@hotmail.com\"\n    },\n    {\n        \"idcliente\": 6,\n        \"Nombre\": \"Nico\",\n        \"Apellido\": \"Perez\",\n        \"Correo\": \"Nico@hotmail.com\"\n    },\n    {\n        \"idcliente\": 7,\n        \"Nombre\": \"Pepe\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Pepe@hotmail.com\"\n    },\n    {\n        \"idcliente\": 8,\n        \"Nombre\": \"Fede\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Fede@hotmail.com\"\n    },\n    {\n        \"idcliente\": 9,\n        \"Nombre\": \"Messi\",\n        \"Apellido\": \"Lionel\",\n        \"Correo\": \"Messi@gmail.com\"\n    },\n    {\n        \"idcliente\": 10,\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Maradona\",\n        \"Correo\": \"Maradona@gmail.com\"\n    },\n    {\n        \"idcliente\": 11,\n        \"Nombre\": \"Nadia\",\n        \"Apellido\": \"Soledad\",\n        \"Correo\": \"Nadia@gmail.com\"\n    },\n    {\n        \"idcliente\": 12,\n        \"Nombre\": \"Nadia\",\n        \"Apellido\": \"Soledad\",\n        \"Correo\": \"Nadia@gmail.com\"\n    },\n    {\n        \"idcliente\": 13,\n        \"Nombre\": \"Sole\",\n        \"Apellido\": \" \",\n        \"Correo\": \"Sole@gmail.com\"\n    },\n    {\n        \"idcliente\": 14,\n        \"Nombre\": \"Julio\",\n        \"Apellido\": \" \",\n        \"Correo\": \"Julio@gmail.com\"\n    },\n    {\n        \"idcliente\": 15,\n        \"Nombre\": \"Lucas\",\n        \"Apellido\": \"Rojas\",\n        \"Correo\": \"Lucas@hotmail.com\"\n    },\n    {\n        \"idcliente\": 16,\n        \"Nombre\": \"Lucas2\",\n        \"Apellido\": \"Rojas2\",\n        \"Correo\": \"Lucas@hotmail.com\"\n    }\n]"
+				},
+				{
+					"name": "Revision ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Analia\",\r\n    \"Apellido\":\"\",\r\n    \"Correo\":\"Analia@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1401"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"579-9RZujbZKThiffd6CbEVcHf6nL+s\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 02:43:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idcliente\": 1,\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"Correo\": \"GonzaVico@hotmail.com\"\n    },\n    {\n        \"idcliente\": 2,\n        \"Nombre\": \"Matias\",\n        \"Apellido\": \"Vigoni\",\n        \"Correo\": \"MatiVigoni@hotmail.com\"\n    },\n    {\n        \"idcliente\": 3,\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"Correo\": \"omardandrea@hotmail.com\"\n    },\n    {\n        \"idcliente\": 4,\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Suarez\",\n        \"Correo\": \"Suarez@gmail.com\"\n    },\n    {\n        \"idcliente\": 5,\n        \"Nombre\": \"Lucia\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"lucia98@hotmail.com\"\n    },\n    {\n        \"idcliente\": 6,\n        \"Nombre\": \"Nico\",\n        \"Apellido\": \"Perez\",\n        \"Correo\": \"Nico@hotmail.com\"\n    },\n    {\n        \"idcliente\": 7,\n        \"Nombre\": \"Pepe\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Pepe@hotmail.com\"\n    },\n    {\n        \"idcliente\": 8,\n        \"Nombre\": \"Fede\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Fede@hotmail.com\"\n    },\n    {\n        \"idcliente\": 9,\n        \"Nombre\": \"Messi\",\n        \"Apellido\": \"Lionel\",\n        \"Correo\": \"Messi@gmail.com\"\n    },\n    {\n        \"idcliente\": 10,\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Maradona\",\n        \"Correo\": \"Maradona@gmail.com\"\n    },\n    {\n        \"idcliente\": 11,\n        \"Nombre\": \"Nadia\",\n        \"Apellido\": \"Soledad\",\n        \"Correo\": \"Nadia@gmail.com\"\n    },\n    {\n        \"idcliente\": 12,\n        \"Nombre\": \"Nadia\",\n        \"Apellido\": \"Soledad\",\n        \"Correo\": \"Nadia@gmail.com\"\n    },\n    {\n        \"idcliente\": 13,\n        \"Nombre\": \"Sole\",\n        \"Apellido\": \" \",\n        \"Correo\": \"Sole@gmail.com\"\n    },\n    {\n        \"idcliente\": 14,\n        \"Nombre\": \"Julio\",\n        \"Apellido\": \" \",\n        \"Correo\": \"Julio@gmail.com\"\n    },\n    {\n        \"idcliente\": 15,\n        \"Nombre\": \"Lucas\",\n        \"Apellido\": \"Rojas\",\n        \"Correo\": \"Lucas@hotmail.com\"\n    },\n    {\n        \"idcliente\": 16,\n        \"Nombre\": \"Lucas2\",\n        \"Apellido\": \"Rojas2\",\n        \"Correo\": \"Lucas@hotmail.com\"\n    },\n    {\n        \"idcliente\": 17,\n        \"Nombre\": \"Analia\",\n        \"Apellido\": \"\",\n        \"Correo\": \"Analia@hotmail.com\"\n    }\n]"
+				},
+				{
+					"name": "Nuevo cliente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Analia\",\r\n    \"Apellido\":\"\",\r\n    \"Correo\":\"Analia@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/crearCliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crearCliente"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-xfCGxPc+plO90iyBC6EotITrtMM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 02:42:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "El cliente a sido creado"
+				},
+				{
+					"name": "Crear un Cliente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Lucas2\",\r\n    \"Apellido\":\"Rojas2\",\r\n    \"Correo\":\"Lucas@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/crearCliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crearCliente"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-xfCGxPc+plO90iyBC6EotITrtMM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 02:38:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "El cliente a sido creado"
+				}
+			]
+		},
+		{
+			"name": "Eliminar un cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/borrar/cliente/11",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"borrar",
+						"cliente",
+						"11"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Revision de los clientes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1319"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"527-jSKiPvxGEFerTeVCn1FoMN6wf9w\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 02:51:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idcliente\": 1,\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"Correo\": \"GonzaVico@hotmail.com\"\n    },\n    {\n        \"idcliente\": 2,\n        \"Nombre\": \"Matias\",\n        \"Apellido\": \"Vigoni\",\n        \"Correo\": \"MatiVigoni@hotmail.com\"\n    },\n    {\n        \"idcliente\": 3,\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"Correo\": \"omardandrea@hotmail.com\"\n    },\n    {\n        \"idcliente\": 4,\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Suarez\",\n        \"Correo\": \"Suarez@gmail.com\"\n    },\n    {\n        \"idcliente\": 5,\n        \"Nombre\": \"Lucia\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"lucia98@hotmail.com\"\n    },\n    {\n        \"idcliente\": 6,\n        \"Nombre\": \"Nico\",\n        \"Apellido\": \"Perez\",\n        \"Correo\": \"Nico@hotmail.com\"\n    },\n    {\n        \"idcliente\": 7,\n        \"Nombre\": \"Pepe\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Pepe@hotmail.com\"\n    },\n    {\n        \"idcliente\": 8,\n        \"Nombre\": \"Fede\",\n        \"Apellido\": \"Lucantoni\",\n        \"Correo\": \"Fede@hotmail.com\"\n    },\n    {\n        \"idcliente\": 9,\n        \"Nombre\": \"Messi\",\n        \"Apellido\": \"Lionel\",\n        \"Correo\": \"Messi@gmail.com\"\n    },\n    {\n        \"idcliente\": 10,\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Maradona\",\n        \"Correo\": \"Maradona@gmail.com\"\n    },\n    {\n        \"idcliente\": 12,\n        \"Nombre\": \"Nadia\",\n        \"Apellido\": \"Soledad\",\n        \"Correo\": \"Nadia@gmail.com\"\n    },\n    {\n        \"idcliente\": 13,\n        \"Nombre\": \"Sole\",\n        \"Apellido\": \" \",\n        \"Correo\": \"Sole@gmail.com\"\n    },\n    {\n        \"idcliente\": 14,\n        \"Nombre\": \"Julio\",\n        \"Apellido\": \" \",\n        \"Correo\": \"Julio@gmail.com\"\n    },\n    {\n        \"idcliente\": 15,\n        \"Nombre\": \"Lucas\",\n        \"Apellido\": \"Rojas\",\n        \"Correo\": \"Lucas@hotmail.com\"\n    },\n    {\n        \"idcliente\": 16,\n        \"Nombre\": \"Lucas2\",\n        \"Apellido\": \"Rojas2\",\n        \"Correo\": \"Lucas@hotmail.com\"\n    },\n    {\n        \"idcliente\": 17,\n        \"Nombre\": \"Analia\",\n        \"Apellido\": \"\",\n        \"Correo\": \"Analia@hotmail.com\"\n    }\n]"
+				},
+				{
+					"name": "Eliminar un cliente",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/borrar/cliente/11",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"borrar",
+								"cliente",
+								"11"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-8afcciBkkpfcWEyU4Mg1gN1zNLc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 02:47:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "El Cliente a sido eliminado de la Base de Datos"
+				}
+			]
+		},
+		{
+			"name": "Actualizar un cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"Nombre\": \"Julio\",\r\n        \"Apellido\": \"Dandrea\",\r\n        \"Correo\": \"Julio@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/update/cliente/14",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update",
+						"cliente",
+						"14"
+					]
+				},
+				"description": "_Actualización_\r\n\r\nMediante la solicitud \"PUT\" se actualiza la informacion que se desee del cliente"
+			},
+			"response": [
+				{
+					"name": "Actualizar un cliente",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"Nombre\": \"Julio\",\r\n        \"Apellido\": \"Dandrea\",\r\n        \"Correo\": \"Julio@gmail.com\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/update/cliente/14",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update",
+								"cliente",
+								"14"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-zqJBxwy1LRfzHn63bGQL4Zc5QnI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 13:29:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "El Cliente a sido actualizado"
+				}
+			]
+		},
+		{
+			"name": "Lista de productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/producto",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"producto"
+					]
+				},
+				"description": "_Lista_\r\nUtilizando la solicitud \"GET\" se obtiene la lista de todos los productos y su información"
+			},
+			"response": [
+				{
+					"name": "Lista de productos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "519"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"207-tShXPa6WNSD9X+meBcQVMV9lIbc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 13:35:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idproducto\": 1,\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\"\n    },\n    {\n        \"idproducto\": 2,\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\"\n    },\n    {\n        \"idproducto\": 3,\n        \"NombreP\": \"GPU AMD Radeon RX 550X\",\n        \"Precio\": \"30000\"\n    },\n    {\n        \"idproducto\": 4,\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\"\n    },\n    {\n        \"idproducto\": 5,\n        \"NombreP\": \"Placa Madre Asus Prime H310m-r R2.0\",\n        \"Precio\": \"140000\"\n    },\n    {\n        \"idproducto\": 6,\n        \"NombreP\": \"Asus Placa Base Micro Atx Ddr3 1600 Lga 1150 B85 M-g\",\n        \"Precio\": \"150000\"\n    },\n    {\n        \"idproducto\": 7,\n        \"NombreP\": \"GPU NVIDIA GeForce RTX 3070\",\n        \"Precio\": \"47000\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Producto por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/producto/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"producto",
+						"3"
+					]
+				},
+				"description": "_ID_\r\n\r\nUtilizando la solicitud \"GET\" y como parametro un número que representa el ID del producto, se obtiene la información de dicho producto solicitado"
+			},
+			"response": [
+				{
+					"name": "Producto por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/producto/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"46-qliB90glNlm2bJK/FG8TSkpx2yM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 13:37:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idproducto\": 3,\n        \"NombreP\": \"GPU AMD Radeon RX 550X\",\n        \"Precio\": \"30000\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Crear un Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":9,\r\n    \"NombreP\":\"Raspberry Pi 4 Model B 4gb Ram Placa Sbc Element14\",\r\n    \"Precio\":\"9.779\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/crearProducto",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crearProducto"
+					]
+				},
+				"description": "_Crear_\r\n\r\nUtilizando la solicitud \"POST\" creamos un nuevo producto en la Base de Datos"
+			},
+			"response": [
+				{
+					"name": "Crear un Producto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idproducto\":9,\r\n    \"NombreP\":\"Raspberry Pi 4 Model B 4gb Ram Placa Sbc Element14\",\r\n    \"Precio\":\"9.779\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/crearProducto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crearProducto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": [],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Verificacion de la solicitud",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idproducto\":9,\r\n    \"NombreP\":\"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\r\n    \"Precio\":\"7.800\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "720"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d0-SJIw11M8k/OTQLOSoQDvWIKx1Ps\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 13:51:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idproducto\": 1,\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\"\n    },\n    {\n        \"idproducto\": 2,\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\"\n    },\n    {\n        \"idproducto\": 3,\n        \"NombreP\": \"GPU AMD Radeon RX 550X\",\n        \"Precio\": \"30000\"\n    },\n    {\n        \"idproducto\": 4,\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\"\n    },\n    {\n        \"idproducto\": 5,\n        \"NombreP\": \"Placa Madre Asus Prime H310m-r R2.0\",\n        \"Precio\": \"140000\"\n    },\n    {\n        \"idproducto\": 6,\n        \"NombreP\": \"Asus Placa Base Micro Atx Ddr3 1600 Lga 1150 B85 M-g\",\n        \"Precio\": \"150000\"\n    },\n    {\n        \"idproducto\": 7,\n        \"NombreP\": \"GPU NVIDIA GeForce RTX 3070\",\n        \"Precio\": \"47000\"\n    },\n    {\n        \"idproducto\": 8,\n        \"NombreP\": \"Raspberry Pi 4 Model B 4gb Ram Placa Sbc Element14\",\n        \"Precio\": \"9.779\"\n    },\n    {\n        \"idproducto\": 9,\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\n        \"Precio\": \"7.800\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Borrar un producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/producto",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"producto"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Verificacion del producto 8 borrado",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "623"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26f-NJl6Jg20+gBaUy/FNGZfJhgB4i8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 13:56:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idproducto\": 1,\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\"\n    },\n    {\n        \"idproducto\": 2,\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\"\n    },\n    {\n        \"idproducto\": 3,\n        \"NombreP\": \"GPU AMD Radeon RX 550X\",\n        \"Precio\": \"30000\"\n    },\n    {\n        \"idproducto\": 4,\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\"\n    },\n    {\n        \"idproducto\": 5,\n        \"NombreP\": \"Placa Madre Asus Prime H310m-r R2.0\",\n        \"Precio\": \"140000\"\n    },\n    {\n        \"idproducto\": 6,\n        \"NombreP\": \"Asus Placa Base Micro Atx Ddr3 1600 Lga 1150 B85 M-g\",\n        \"Precio\": \"150000\"\n    },\n    {\n        \"idproducto\": 7,\n        \"NombreP\": \"GPU NVIDIA GeForce RTX 3070\",\n        \"Precio\": \"47000\"\n    },\n    {\n        \"idproducto\": 9,\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\n        \"Precio\": \"7.800\"\n    }\n]"
+				},
+				{
+					"name": "Lista de productos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "720"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d0-SJIw11M8k/OTQLOSoQDvWIKx1Ps\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 13:54:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idproducto\": 1,\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\"\n    },\n    {\n        \"idproducto\": 2,\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\"\n    },\n    {\n        \"idproducto\": 3,\n        \"NombreP\": \"GPU AMD Radeon RX 550X\",\n        \"Precio\": \"30000\"\n    },\n    {\n        \"idproducto\": 4,\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\"\n    },\n    {\n        \"idproducto\": 5,\n        \"NombreP\": \"Placa Madre Asus Prime H310m-r R2.0\",\n        \"Precio\": \"140000\"\n    },\n    {\n        \"idproducto\": 6,\n        \"NombreP\": \"Asus Placa Base Micro Atx Ddr3 1600 Lga 1150 B85 M-g\",\n        \"Precio\": \"150000\"\n    },\n    {\n        \"idproducto\": 7,\n        \"NombreP\": \"GPU NVIDIA GeForce RTX 3070\",\n        \"Precio\": \"47000\"\n    },\n    {\n        \"idproducto\": 8,\n        \"NombreP\": \"Raspberry Pi 4 Model B 4gb Ram Placa Sbc Element14\",\n        \"Precio\": \"9.779\"\n    },\n    {\n        \"idproducto\": 9,\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\n        \"Precio\": \"7.800\"\n    }\n]"
+				},
+				{
+					"name": "Borrar el producto 8",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/borrar/producto/8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"borrar",
+								"producto",
+								"8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-kDxygkbauGN3Tth/GJnO8Am6OdY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 13:55:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "El producto a sido eliminado de la Base de Datos"
+				}
+			]
+		},
+		{
+			"name": "Actualizar un producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \r\n        \"idproducto\": 9,\r\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\r\n        \"Precio\": \"10.000\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/update/producto/9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update",
+						"producto",
+						"9"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Lista de productos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "623"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26f-NJl6Jg20+gBaUy/FNGZfJhgB4i8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 13:58:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idproducto\": 1,\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\"\n    },\n    {\n        \"idproducto\": 2,\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\"\n    },\n    {\n        \"idproducto\": 3,\n        \"NombreP\": \"GPU AMD Radeon RX 550X\",\n        \"Precio\": \"30000\"\n    },\n    {\n        \"idproducto\": 4,\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\"\n    },\n    {\n        \"idproducto\": 5,\n        \"NombreP\": \"Placa Madre Asus Prime H310m-r R2.0\",\n        \"Precio\": \"140000\"\n    },\n    {\n        \"idproducto\": 6,\n        \"NombreP\": \"Asus Placa Base Micro Atx Ddr3 1600 Lga 1150 B85 M-g\",\n        \"Precio\": \"150000\"\n    },\n    {\n        \"idproducto\": 7,\n        \"NombreP\": \"GPU NVIDIA GeForce RTX 3070\",\n        \"Precio\": \"47000\"\n    },\n    {\n        \"idproducto\": 9,\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\n        \"Precio\": \"7.800\"\n    }\n]"
+				},
+				{
+					"name": "Producto 9 Actualizado",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \r\n        \"idproducto\": 9,\r\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\r\n        \"Precio\": \"10.000\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/update/producto/9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update",
+								"producto",
+								"9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-RVFTO6WOZKt37J5V6cBEa1mgnMY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 14:00:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "El producto a sido actualizado"
+				},
+				{
+					"name": "Revision de la actualización",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \r\n        \"idproducto\": 9,\r\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\r\n        \"Precio\": \"10.000\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/producto/9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto",
+								"9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6a-FcXE33QqT61u1Qb6mnCzvta01Ao\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 14:01:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idproducto\": 9,\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\n        \"Precio\": \"10.000\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Productos vendidos a clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/clienteproducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clienteproducto"
+					]
+				},
+				"description": "_Lista_\r\n\r\nUtilizando la solicitud \"GET\" obtenemos todos los productos que han sido vendidos y a que cliente se lo vendió."
+			},
+			"response": [
+				{
+					"name": "Productos vendidos a clientes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clienteproducto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clienteproducto"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "873"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"369-Qb3MujxdiuCeCG/NYm6WJciHVBA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 14:03:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\",\n        \"cantProducto\": 2\n    },\n    {\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\",\n        \"cantProducto\": 3\n    },\n    {\n        \"Nombre\": \"Matias\",\n        \"Apellido\": \"Vigoni\",\n        \"NombreP\": \"GPU AMD Radeon RX 550X\",\n        \"Precio\": \"30000\",\n        \"cantProducto\": 4\n    },\n    {\n        \"Nombre\": \"Matias\",\n        \"Apellido\": \"Vigoni\",\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\",\n        \"cantProducto\": 1\n    },\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\",\n        \"cantProducto\": 1\n    },\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\",\n        \"cantProducto\": 4\n    },\n    {\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"NombreP\": \"Asus Placa Base Micro Atx Ddr3 1600 Lga 1150 B85 M-g\",\n        \"Precio\": \"150000\",\n        \"cantProducto\": 3\n    },\n    {\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Suarez\",\n        \"NombreP\": \"GPU NVIDIA GeForce RTX 3070\",\n        \"Precio\": \"47000\",\n        \"cantProducto\": 5\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Producto vendido a un cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/clienteproducto/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clienteproducto",
+						"3"
+					]
+				},
+				"description": "_Lista_\r\n\r\nUtilizando la solicitud \"GET\" obtenemos todos los productos que se vendieron a un solo cliente, utilizando el ID de ese mismo cliente."
+			},
+			"response": [
+				{
+					"name": "Producto vendido al cliente 3",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clienteproducto/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clienteproducto",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "210"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d2-O59q0dL+IvmN+Xy9BoCsAJSnCWo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 14:05:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\",\n        \"cantProducto\": 1\n    },\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\",\n        \"cantProducto\": 4\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Crear productos vendidos a clientes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID_cliente\":3,\r\n    \"ID_producto\":9,\r\n    \"cantProducto\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/crearclienteproducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crearclienteproducto"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Historial producto vendido al cliente 3",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID_cliente\":3,\r\n    \"ID_producto\":9,\r\n    \"cantProducto\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clienteproducto/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clienteproducto",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "354"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"162-HQTV1nfiq0NzD9mqs+lsAlY37/c\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 14:33:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\",\n        \"cantProducto\": 1\n    },\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\",\n        \"cantProducto\": 4\n    },\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"Raspberry Pi 3 B+ Plus Kit Fuente Certificada Disipadores\",\n        \"Precio\": \"10.000\",\n        \"cantProducto\": 2\n    }\n]"
+				},
+				{
+					"name": "Historial",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clienteproducto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clienteproducto"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "873"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"369-Qb3MujxdiuCeCG/NYm6WJciHVBA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 14:08:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\",\n        \"cantProducto\": 2\n    },\n    {\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\",\n        \"cantProducto\": 3\n    },\n    {\n        \"Nombre\": \"Matias\",\n        \"Apellido\": \"Vigoni\",\n        \"NombreP\": \"GPU AMD Radeon RX 550X\",\n        \"Precio\": \"30000\",\n        \"cantProducto\": 4\n    },\n    {\n        \"Nombre\": \"Matias\",\n        \"Apellido\": \"Vigoni\",\n        \"NombreP\": \"CPU AMD 3 3100\",\n        \"Precio\": \"10000\",\n        \"cantProducto\": 1\n    },\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"CPU AMD 5 5300\",\n        \"Precio\": \"120000\",\n        \"cantProducto\": 1\n    },\n    {\n        \"Nombre\": \"Omar\",\n        \"Apellido\": \"Dandrea\",\n        \"NombreP\": \"GPU AMD Radeon RX 540X\",\n        \"Precio\": \"35000\",\n        \"cantProducto\": 4\n    },\n    {\n        \"Nombre\": \"Gonzalo\",\n        \"Apellido\": \"Vico\",\n        \"NombreP\": \"Asus Placa Base Micro Atx Ddr3 1600 Lga 1150 B85 M-g\",\n        \"Precio\": \"150000\",\n        \"cantProducto\": 3\n    },\n    {\n        \"Nombre\": \"Diego\",\n        \"Apellido\": \"Suarez\",\n        \"NombreP\": \"GPU NVIDIA GeForce RTX 3070\",\n        \"Precio\": \"47000\",\n        \"cantProducto\": 5\n    }\n]"
+				},
+				{
+					"name": "Crear historial de cliente 3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID_cliente\":3,\r\n    \"ID_producto\":9,\r\n    \"cantProducto\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/crearclienteproducto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crearclienteproducto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": [],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
