@@ -33,7 +33,7 @@ app.listen(PORT, ()=> console.log(`El servidor esta funcionando en el puerto ${P
 //********* rutas *******
 //Mensaje de bienvenida
 app.get('/', (req,res)=>{
-  res.send('bienvenido a la api de Neo-Web');
+  res.send('Bienvenido a la api de Neo-Web');
 });
 
 //obtener todos los productos de cada cliente
@@ -136,7 +136,7 @@ app.post('/crearCliente', (req,res)=>{
   }
   connection.query(sql,clienteobjt, error => {
     if(error) throw error;
-    res.send('Cliente creado');
+    res.send('El cliente a sido creado');
   });
 });
 
@@ -151,7 +151,7 @@ app.post('/crearProducto', (req,res)=>{
   }
   connection.query(sql,Productobjet), error => {
     if(error) throw error;
-    res.send('Producto creado');
+    res.send('El producto  a sido creado');
   }
 });
 
@@ -167,7 +167,7 @@ app.post('/crearclienteproducto', (req,res)=>{
   }
   connection.query(sql,CliexProductobjet), error => {
     if(error) throw error;
-    res.send('Informacion  creado');
+    res.send('Datos ingresados correctamente');
   }
 });
 
@@ -184,7 +184,7 @@ app.put('/update/cliente/:id',(req, res)=> {
   connection.query(sql, error =>{
     if(error) throw error;
 
-    res.send('Cliente actualizado');
+    res.send('El Cliente a sido actualizado');
   });
 
 });
@@ -198,7 +198,7 @@ app.put('/update/producto/:id',(req,res)=> {
   connection.query(sql, error =>{
     if(error) throw error;
 
-    res.send('Producto actualizado');
+    res.send('El producto a sido actualizado');
   });
 
 });
@@ -211,7 +211,7 @@ app.delete('/borrar/cliente/:id', (req,res)=>{
   connection.query(sql, error =>{
     if(error) throw error;
 
-    res.send('Cliente eliminado');
+    res.send('El Cliente a sido eliminado de la Base de Datos');
   });
 
 });
@@ -224,6 +224,6 @@ app.delete('/borrar/producto/:id', (req,res)=>{
   connection.query(sql, error =>{
     if(error) throw error;
 
-    res.send('Producto eliminado');
+    res.send('El producto a sido eliminado de la Base de Datos');
   });
 });
