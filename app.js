@@ -44,6 +44,7 @@ app.get('/clienteproducto', (req,res)=>{
 
     if(results.length>0){
       res.json(results); 
+      console.log(results);
     }else{
       res.send('no hay resultados');
     }
@@ -58,7 +59,8 @@ app.get('/clienteproducto/:id', (req,res)=>{
     if(error) throw error;
 
     if(results.length>0){
-      res.json(results); 
+      res.json(results);
+      console.log(results); 
     }else{
       res.send('no hay resultados');
     }
@@ -74,7 +76,8 @@ app.get('/cliente', (req,res)=>{
     if(error) throw error;
 
     if(results.length>0){
-      res.json(results); 
+      res.json(results);
+      console.log(results); 
     }else{
       res.send('no hay resultados');
     }
@@ -90,6 +93,7 @@ app.get('/cliente/:id', (req,res)=>{
 
     if(result.length>0){
       res.json(result); 
+      console.log(result); 
     }else{
       res.send('no hay resultados');
     }
@@ -103,7 +107,8 @@ app.get('/Producto', (req,res)=>{
     if(error) throw error;
 
     if(results.length>0){
-      res.json(results); 
+      res.json(results);
+      console.log(results);  
     }else{
       res.send('no hay resultados');
     }
@@ -119,6 +124,7 @@ app.get('/Producto/:id', (req,res)=>{
 
     if(result.length>0){
       res.json(result); 
+      console.log(result); 
     }else{
       res.send('no hay resultados');
     }
